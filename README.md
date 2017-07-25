@@ -9,7 +9,7 @@ The blog outlines an approach to achieve ultra low latency API Management provid
 ## Pre-Requisite: A 3scale API Management account - preferably On Prem.  
 
 ## Instructions
-1. Download and install the Java Plugin: https://github.com/3scale/3scale_ws_api_for_java
+1. Download and install the Java Plugin (3scale-api): https://github.com/3scale/3scale_ws_api_for_java
    Before running mvn clean install, set the DEFULAT_HOST here: https://github.com/3scale/3scale_ws_api_for_java/blob/master/src/main/java/threescale/v3/api/ServiceApi.java to be that of you 3scale API Management back end.
    Run mvn clean install.
    Take note of the version of line 6 in pom.xml in the root directory of the Repo.
@@ -30,5 +30,7 @@ As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices r
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/3-Service-Id.png)  
 	Now get your Service Tokens. Go to Gear Sign -> Personal Settings -> Tokens. Copy your 4 tokens - you'll need them when configuring your Plugin Wrappers.
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/4-Service-tokens.png)  
-4. Update your Plugin Wrappers and build. For each of JPW-A, JPW-B, JPW-C, JPW-D, open /src/main/resources.props.properties. Set your serviceid and servicetoken to the correct one for Services A, B, C and D.
+	
+4. Update your Plugin Wrappers and build. For each of JPW-A, JPW-B, JPW-C, JPW-D, open /src/main/resources.props.properties. Set your serviceid and servicetoken to the correct one for Services A, B, C and D. Now open each of these project's pom.xml. Ensure the version of the 3scale-api dependency is the same as the actual component in 1. above.  
+Run mvn clean install on each.
 
