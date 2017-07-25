@@ -6,7 +6,7 @@
 This Repo contains the source code and instructions for running the solution detailed in Kavitha Srinivasan's and Tom Corcoran's recent Blog Low Latency API Management for Microservices framework *Light-4-J - with Red Hat 3scale* **INSERT LINK**
 The blog outlines an approach to achieve ultra low latency API Management provided by 3scale and implemented as a Java Plugin and Wrapper for the popular Microservices Framework https://networknt.github.io/light-rest-4j/ Seee the blog for high level details on the approach.
 
-## Pre-Requisite: A 3scale API Management account - preferably On Prem.  
+## Pre-Requisite: ## A 3scale API Management account - preferably On Prem.  
 
 ## Instructions
 1. Download and install the Java Plugin (3scale-api): https://github.com/3scale/3scale_ws_api_for_java
@@ -40,7 +40,16 @@ Run *mvn clean install* on each.
   # KAVITHA - anything you want to add? Some description on how we embedded calls to each plugin wrapper inside each api's Interceptor?
 
 
-
+6. Use the 3scale APIs to populate your Included in this repo is a 
 	
-6. Run your 4 
+7. Run your 4 microservices. Run the following inside each of api_a, api_b, api_c, api_d:
+   mvn -Dmaven.test.skip=true clean install exec:exec&  	 
+   Test each:
+   		curl http://localhost:7004/apid/data12?apiKey=<apiKeyX>
+   		curl http://localhost:7003/apic/data18?apiKey=<apiKeyX>
+   		curl http://localhost:7002/apib/data11?apiKey=<apiKeyX>
+   		curl http://localhost:7001/apia/data18?apiKey=<apiKeyX>
+    			
+  	
+
 
