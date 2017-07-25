@@ -17,6 +17,10 @@ Instructions
 2. Clone this repo.
 
 3. Prepare your 3scale account.
-As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices represented by 4 light-4-j components in this repo: swagger-light-java-a, swagger-light-java-b etc. These 4 Microservices are represented by 4 3scale Services.
-	3.1 Add 4 3scale Services. ![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/1-3scaleServices.png)
+As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices represented by 4 light-4-j components in this repo: swagger-light-java-a, swagger-light-java-b etc. These 4 Microservices are represented by 4 3scale Services.  
+	3.1 Add 4 3scale Services. ![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/1-3scaleServices.png)  
+	Your first service will already exist with the name API. Edit it, choose Definition and change its name to Service A. System is api and is not editable.
+	For your remaining 3 Services, choose Create Service. Give each one a system name service-b and a name Service B, repeating for C and D.  
+	3.1 Remove your 3scale Default Application Plans.  
+	
 
