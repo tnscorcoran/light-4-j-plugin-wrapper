@@ -21,6 +21,8 @@ As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices r
 	3.1 Add 4 3scale Services. ![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/1-3scaleServices.png)  
 	Your first service will already exist with the name API. Edit it, choose Definition and change its name to Service A. System is api and is not editable.
 	For your remaining 3 Services, choose Create Service. Give each one a system name service-b and a name Service B, repeating for C and D.  
-	3.1 Remove your 3scale Default Application Plans.  
+	3.1 Remove your 3scale Default Application Plans. Open each Service and click on Publish Application Plans. A will have 2, the others will have none. With Service A, there will be 2 a Basic and Unlimited. With the other 3 services, you'll need to create an Application Plan. For all 4, make sure the Default Plan is blank. This ensures when we create accounts, a default Application will not be created (we'll be doing this manually).
+	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/2-Applications-PlansList.png)  
+
 4. Update your properties.  
 
