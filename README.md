@@ -18,7 +18,5 @@ Instructions
 
 3. Prepare your 3scale account.
 As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices represented by 4 light-4-j components in this repo: swagger-light-java-a, swagger-light-java-b etc. These 4 Microservices are represented by 4 3scale Services.
-<Insert 4 3scale Services>
-
-Make the following Modifications. 
+	3.1 Add 4 3scale Services. ![Alt text](relative/_images/1-3scaleServices.png?raw=true "")
 
