@@ -6,7 +6,7 @@
 This Repo contains the source code and instructions for running the solution detailed in Kavitha Srinivasan's and Tom Corcoran's recent Blog Low Latency API Management for Microservices framework *Light-4-J - with Red Hat 3scale* **INSERT LINK**
 The blog outlines an approach to achieve ultra low latency API Management provided by 3scale and implemented as a Java Plugin and Wrapper for the popular Microservices Framework https://networknt.github.io/light-rest-4j/ Seee the blog for high level details on the approach.
 
-## Pre-Requisite: ## A 3scale API Management account - preferably On Prem.  
+## Pre-Requisite: ## A 3scale API Management account - preferably [On Premises](https://support.3scale.net/guides/infrastructure/onpremises20-installation).  
 
 ## Instructions
 1. Download and install the Java Plugin (3scale-api): https://github.com/3scale/3scale_ws_api_for_java
