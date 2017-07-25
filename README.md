@@ -10,8 +10,8 @@ The blog outlines an approach to achieve ultra low latency API Management provid
 
 ## Instructions
 1. Download and install the Java Plugin (3scale-api): https://github.com/3scale/3scale_ws_api_for_java
-   Before running mvn clean install, set the DEFULAT_HOST here: https://github.com/3scale/3scale_ws_api_for_java/blob/master/src/main/java/threescale/v3/api/ServiceApi.java to be that of you 3scale API Management back end.
-   Run mvn clean install.
+   Before running *mvn clean install*, set the DEFULAT_HOST here: https://github.com/3scale/3scale_ws_api_for_java/blob/master/src/main/java/threescale/v3/api/ServiceApi.java to be that of you 3scale API Management back end.
+   Run *mvn clean install*.
    Take note of the version of line 6 in pom.xml in the root directory of the Repo.
 
 2. Clone this repo.
@@ -32,5 +32,15 @@ As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices r
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/4-Service-tokens.png)  
 	
 4. Update your Plugin Wrappers and build. For each of JPW-A, JPW-B, JPW-C, JPW-D, open /src/main/resources.props.properties. Set your serviceid and servicetoken to the correct one for Services A, B, C and D. Now open each of these project's pom.xml. Ensure the version of the 3scale-api dependency is the same as the actual component in 1. above.  
-Run mvn clean install on each.
+Run *mvn clean install* on each.
+	
+5. Update your APIs and build. For each of api_a, api_b, api_c, api_d, add the same properties file to as you inserted to JPW-A, JPW-B, JPW-C, JPW-D respectively. (JPW-x's are picked up at build time, api_x's at runtime).
+
+  
+  # KAVITHA - anything you want to add? Some description on how we embedded calls to each plugin wrapper inside each api's Interceptor?
+
+
+
+	
+6. Run your 4 
 
