@@ -1,9 +1,11 @@
-Helper for CIBC-POC project to 
+Helper for Light-4-J-Java Plugin Wrapper project to 
 	Create Accounts and Applications - 100 accounts, each with an application using the same credentials in the 4 APIs
 	It is envisaged this will be used with 3scale On Prem - where duplicate API keys are allowed in different 3scale Services.
 
 ********************************************************
 ********************************************************
+	Start this app using 
+	mvn tomcat7:run
 	To create Accounts - 4 applications each
 		http://localhost:8080/utilities-light4j/createAccountsAndApplications
 	
