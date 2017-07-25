@@ -1,0 +1,18 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
+
+
+  
+<h1>Hobby page</h1>  
+<form:form method="POST" commandname="termsAndConditions" action="gsma/terms-conditions">  
+<table>  
+    <tbody><tr>  
+        <td>These are detailed Terms and Conditions curated by GSMA which need to be accepted to proceed.</td>  
+        <td><form:checkbox path="accepted" id=äccept"></form:checkbox></td>  
+    </tr>  
+    <tr>  
+        <td colspan="2">  
+            <input type="submit" value="Submit">  
+        </td>  
+    </tr>  
+</tbody></table>    
+</form:form>  
