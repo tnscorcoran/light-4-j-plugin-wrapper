@@ -28,7 +28,7 @@ As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices r
 	3.3 Retrieve your Service Ids and Tokens. These are required to make Reporting and Authorization from Plugin to 3scale API Manager.  
 	First get your 4 Service Ids. Open each Service's Overview and get it as shown. (with 3scale On Prem this is likely to be a single or double digit number). Keep note of each one and the service it relates to.
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/3-Service-Id.png)  
-	Now get your Service Tokens. Go to Gear Sign -> Personal Settings -> Tokens. Copy your 4 tokens, keeping a note of which Service each one relates to.
+	Now get your Service Tokens. Go to Gear Sign -> Personal Settings -> Tokens. Copy your 4 tokens - you'll need them when configuring your Plugin Wrappers.
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/4-Service-tokens.png)  
-4. Update your properties.  
+4. Update your Plugin Wrappers and build. For each of JPW-A, JPW-B, JPW-C, JPW-D, open /src/main/resources.props.properties. Set your serviceid and servicetoken to the correct one for Services A, B, C and D.
 
