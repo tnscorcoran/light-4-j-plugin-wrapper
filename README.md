@@ -34,7 +34,7 @@ As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices r
 Run *mvn clean install* on each.
 	
 5. Update your APIs and build. For each of api_a, api_b, api_c, api_d, add the same properties file to as you inserted to JPW-A, JPW-B, JPW-C, JPW-D respectively. (JPW-x's are picked up at build time, api_x's at runtime).  
-Note - taking API code from this Repo is an interim approach to generating the APIs. Time permitting, we will enhance this README and Repo to reflect the recommended OAI spec driven approach on the [Light 4 J Chained Microservices Tutorial](https://networknt.github.io/light-rest-4j/tutorial/ms-chain/) 
+Note - taking API code from this Repo is an interim approach to provisioning the APIs. Time permitting, we will enhance this README and Repo to reflect the recommended OAI spec driven approach on the [Light 4 J Chained Microservices Tutorial](https://networknt.github.io/light-rest-4j/tutorial/ms-chain/) 
 
 6. Use the 3scale APIs to populate required data on 3scale. There are 2 major repetitive tasks we need to undertake (details below). For those we use the utility project included in this repo, *utilities-light4j*.  
 First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
