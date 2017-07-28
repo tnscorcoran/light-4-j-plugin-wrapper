@@ -37,8 +37,12 @@ Run *mvn clean install* on each.
 Note - taking API code from this Repo is an interim approach to provisioning the APIs. Time permitting, we will enhance this README and Repo to reflect the recommended OAI spec driven approach on the [Light 4 J Chained Microservices Tutorial](https://networknt.github.io/light-rest-4j/tutorial/ms-chain/) 
 
 6. Use the 3scale APIs to populate required data on 3scale. There are 2 major repetitive tasks we need to undertake (details below). For those we use the utility project included in this repo, *utilities-light4j*.  
+Both are driven off a local Tomcat web app configured to run these utilities.
+To start run *mvn tomcat7:run*
 First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
-Second *Account and Application* creation. We need to create 100 clients - or more exactly
+This will be rolled out shortly.  
+Second *Account and Application* creation. We need to create 100 clients in each API. To do this run:
+http://localhost:8080/utilities-light4j/createAccountsAndApplications
 	
 7. Run your 4 microservices. Run the following inside each of api_a, api_b, api_c, api_d:
    mvn -Dmaven.test.skip=true clean install exec:exec&  	 
