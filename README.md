@@ -3,8 +3,8 @@
 **Disclaimer**: The code in this repo is not supported by Red Hat/3scale. Rather it's example code of how you can and we did achieve very low latency API Management. We did this by applying a wrapper around the supported 3scale Java Plugin which uses caching and asynchronous calls to 3scale. More details below.
 
 ## Introduction  
-This Repo contains the source code and instructions for running the solution detailed in Kavitha Srinivasan's and Tom Corcoran's recent Blog Low Latency API Management for Microservices framework [Light-4-J - with Red Hat 3scale](http://middlewareblog.redhat.com/2017/07/25/low-latency-api-management-for-microservices-framework-light-4-j-with-red-hat-3scale/)
-The blog outlines an approach to achieve ultra low latency API Management provided by 3scale and implemented as a Java Plugin and Wrapper for the popular Microservices Framework https://networknt.github.io/light-rest-4j/ Seee the blog for high level details on the approach.
+This Repo contains the source code and instructions for running the solution detailed in Kavitha Srinivasan's and Tom Corcoran's recent Blog [Light-4-J - with Red Hat 3scale](http://middlewareblog.redhat.com/2017/07/25/low-latency-api-management-for-microservices-framework-light-4-j-with-red-hat-3scale/)  
+The blog outlines an approach to achieve ultra low latency API Management provided by 3scale and implemented as a Java Plugin and Wrapper for the popular Microservices Framework https://networknt.github.io/light-rest-4j/ See the blog for high level details on the approach.
 
 ## Pre-Requisite: A 3scale API Management account - preferably [On Premises](https://support.3scale.net/guides/infrastructure/onpremises20-installation).  
 
