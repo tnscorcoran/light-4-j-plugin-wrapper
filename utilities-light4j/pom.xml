@@ -4,7 +4,7 @@
   <groupId>net.3scale</groupId>
   <artifactId>utilities-light4j</artifactId>
   <packaging>war</packaging>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.19-SNAPSHOT</version>
   <name>utilities-light4j</name>
   <url>http://maven.apache.org</url>
   

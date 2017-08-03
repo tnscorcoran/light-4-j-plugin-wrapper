@@ -4,7 +4,7 @@
    <groupId>net.3scale</groupId>
    <artifactId>javaPluginWrapper-a</artifactId>
    <packaging>jar</packaging>
-   <version>0.0.8-SNAPSHOT</version>
+   <version>0.0.19-SNAPSHOT</version>
    <name>3scale Java Plugin Wrapper</name>
    <url>http://maven.apache.org</url>
    <properties>

@@ -9,7 +9,7 @@
     <artifactId>swagger-light-java-d</artifactId>
     <packaging>jar</packaging>
     <name>swagger-light-java</name>
-    <version>1.0.0</version>
+    <version>1.0.19</version>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
