@@ -42,8 +42,14 @@ Note - taking API code from this Repo is an interim approach to provisioning the
 	5.1 Create our *3scale Methods*. These are 3scale representations of the Microservice endpoints used to access control and traffic analytics. In each of our 4 Microservices, there are 25 endpoints. We will reflect this in 3scale with 25 methods in each of our 4 3scale Services.  
 	5.2 Create our 100 clients - represented by Applications in 3scale.  
 For those tasks, we use the utility project included in this repo, *utilities-light4j*.  
-First we need to initialize its props.properties with various Ids associated with our 3scale account.
-Both are driven off a local Tomcat web app configured to run these utilities.
+First we need to initialize its props.properties with various Ids associated with our 3scale account.  
+We also have a third task applicable to JMeter:  
+	5.3  Generation of a CSV file with random data elements drawn from our clients and methods to simulate client API calls to Microservices.   
+These 3 are driven off a local Tomcat web app configured to run these utilities.
+  
+Before running it, we need to initialize its /src/main/resources.props.properties. Open that file and make the following changes:
+
+   
 To start run *mvn tomcat7:run*
 First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
 This will be rolled out shortly.  
