@@ -9,14 +9,13 @@ This Repo contains the source code and instructions for running the solution det
 
 ## Instructions
 1. Download and install the Java Plugin (3scale-api): https://github.com/3scale/3scale_ws_api_for_java
-   Before running *mvn clean install*, set the DEFULAT_HOST here: https://github.com/3scale/3scale_ws_api_for_java/blob/master/src/main/java/threescale/v3/api/ServiceApi.java to be that of you 3scale API Management back end.
+   Before running *mvn clean install*, set the DEFULAT_HOST here: /src/main/java/threescale/v3/api/ServiceApi.java to be that of you 3scale API Management back end - if you are using 3scale On Prem for this exercise (recommended).
    Run *mvn clean install*.
-   Take note of the version of line 6 in pom.xml in the root directory of the Repo.
-
-2. Clone this repo.
+   Take note of the version of line 6 in pom.xml in the root directory of the Repo.  
+   Clone this repo.
 
 3. Prepare your 3scale account.
-As discussed in the Blog <INSERT LINK> in this example, we use 4 Microservices represented by 4 light-4-j components in this repo: swagger-light-java-a, swagger-light-java-b etc. These 4 Microservices are represented by 4 3scale Services.  
+As discussed in the [Blog](http://middlewareblog.redhat.com/2017/07/25/low-latency-api-management-for-microservices-framework-light-4-j-with-red-hat-3scale/) in this example, we use 4 Microservices represented by 4 light-4-j components in this repo: swagger-light-java-a, swagger-light-java-b etc. These 4 Microservices are represented by 4 3scale Services.  
 	3.1 Add 4 3scale Services. ![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/1-3scaleServices.png)  
 	Your first service will already exist with the name *API*. Edit it, choose Definition and change its name to Service A. System is *api* and is not editable.
 	For your remaining 3 Services, choose Create Service. Give each one a system name like *service-b* and a name like *Service B*, repeating for C and D.  
