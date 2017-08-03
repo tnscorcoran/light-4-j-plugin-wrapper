@@ -39,17 +39,29 @@ Run *mvn clean install* on each.
 Note - taking API code from this Repo is an interim approach to provisioning the APIs. Time permitting, we will enhance this README and Repo to reflect the recommended OAI spec driven approach on the [Light 4 J Chained Microservices Tutorial](https://networknt.github.io/light-rest-4j/tutorial/ms-chain/) 
 
 5. Use the 3scale APIs to populate required data on 3scale. There are 2 major repetitive tasks we need to undertake (details below).  
-	5.1 Create our *3scale Methods*. These are 3scale representations of the Microservice endpoints used to access control and traffic analytics. In each of our 4 Microservices, there are 25 endpoints. We will reflect this in 3scale with 25 methods in each of our 4 3scale Services.  
-	5.2 Create our 100 clients - represented by Applications in 3scale.  
+	5.1.1 Create our *3scale Methods*. These are 3scale representations of the Microservice endpoints used to access control and traffic analytics. In each of our 4 Microservices, there are 25 endpoints. We will reflect this in 3scale with 25 methods in each of our 4 3scale Services.  
+	5.1.2 Create our 100 clients - represented by Applications in 3scale.  
 For those tasks, we use the utility project included in this repo, *utilities-light4j*.  
 First we need to initialize its props.properties with various Ids associated with our 3scale account.  
 We also have a third task applicable to JMeter:  
-	5.3  Generation of a CSV file with random data elements drawn from our clients and methods to simulate client API calls to Microservices.   
+	5.1.3  Generation of a CSV file with random data elements drawn from our clients and methods to simulate client API calls to Microservices.   
 These 3 are driven off a local Tomcat web app configured to run these utilities.
-  
+![Utilities-props.properties](https://raw.githubusercontent.com/tnscorcoran/light-4-j-plugin-wrapper/master/_images/5-Utilities-props.properties.png)  
 Before running it, we need to initialize its /src/main/resources.props.properties. Open that file and make the following changes:
 
-   
+	5.2.  
+	1 3scale Access token (used to create gateway). Go to Gear sign - Personal Settings - Tokens  
+	
+	![accesstoken-1.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-1.png)
+  
+	Add Access token  
+	![accesstoken-2.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-2.png)
+  
+	Name it, give it read/write access to all scopes and Create Access token. Copy it (you won't be able to see it again).  
+	We'll refer to this your *3scale-access-token*   
+	![accesstoken-1.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-3.png)   
+  	  
+  	2  
 To start run *mvn tomcat7:run*
 First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
 This will be rolled out shortly.  
