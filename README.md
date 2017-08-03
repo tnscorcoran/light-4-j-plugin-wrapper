@@ -50,17 +50,8 @@ These 3 are driven off a local Tomcat web app configured to run these utilities.
 Before running it, we need to initialize its /src/main/resources.props.properties. Open that file and make the following changes:
 
 	5.2.  
-	1 3scale Access token (used to create gateway). Go to Gear sign - Personal Settings - Tokens  
-	
-	![accesstoken-1.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-1.png)
-  
-	Add Access token  
-	![accesstoken-2.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-2.png)
-  
-	Name it, give it read/write access to all scopes and Create Access token. Copy it (you won't be able to see it again).  
+	1 Get your 3scale Access token (used to create gateway). Go to Gear sign - Personal Settings - Tokens. Add Access token. Name it, give it read/write access to all scopes and Create Access token. Copy it (you won't be able to see it again).  
 	We'll refer to this your *3scale-access-token*   
-	![accesstoken-1.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-3.png)   
-  	  
   	2  Insert your 4 Application Plan Ids. Use the *Basic* plan on Microservice A and the other 3 you created in 2.2. above. Navigate to each one and it will be in your browser address bar.  
   	3  Set a random default password for your accounts. As this is a test, they will not be used but rather are needed to create Accounts using the 3scale API.    
   	4  Use any random string   
