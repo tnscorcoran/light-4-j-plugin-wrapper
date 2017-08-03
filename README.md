@@ -17,7 +17,7 @@ This Repo contains the source code and instructions for running the solution det
 3. Prepare your 3scale account.
 As discussed in the [Blog](http://middlewareblog.redhat.com/2017/07/25/low-latency-api-management-for-microservices-framework-light-4-j-with-red-hat-3scale/) in this example, we use 4 Microservices represented by 4 light-4-j components in this repo: swagger-light-java-a, swagger-light-java-b etc. These 4 Microservices are represented by 4 3scale Services.  
 	3.1 Add 4 3scale Services. ![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/1-3scaleServices.png)  
-	Your first service will already exist with the name *API*. Edit it, choose Definition and change its name to Service A. System is *api* and is not editable.
+	Your first service will already exist with the name *API*. Open it, choose Definition, Edit it and change its name to Service A. System is *api* and is not editable.
 	For your remaining 3 Services, choose Create Service. Give each one a system name like *service-b* and a name like *Service B*, repeating for C and D.  
 	3.2 Setup & Remove your 3scale Default Application Plans. Open each Service and click on Publish Application Plans.  
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/2-Applications-PlansLink.png)  
