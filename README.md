@@ -68,6 +68,7 @@ Before running it, we need to initialize its /src/main/resources.props.propertie
   	6  Id of Microservice A, retrieved in 2.3 above.   
   	7  Path where you want generated CSV to be   
   	8  Path where you want generated CSV to be   
+  
 To start run *mvn tomcat7:run*
 First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
 This will be rolled out shortly.  
