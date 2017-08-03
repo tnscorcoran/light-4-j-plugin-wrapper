@@ -39,8 +39,8 @@ Run *mvn clean install* on each.
 Note - taking API code from this Repo is an interim approach to provisioning the APIs. Time permitting, we will enhance this README and Repo to reflect the recommended OAI spec driven approach on the [Light 4 J Chained Microservices Tutorial](https://networknt.github.io/light-rest-4j/tutorial/ms-chain/) 
 
 5. Use the 3scale APIs to populate required data on 3scale. There are 2 major repetitive tasks we need to undertake (details below).  
-1) Create our *3scale Methods*. These are 3scale representations of the Microservice endpoints used to access control and traffic analytics. In each of our 4 Microservices, there are 25 endpoints. We will reflect this in 3scale with 25 methods in each of our 4 3scale Services.  
-2) Create our 100 clients - represented by Applications in 3scale.  
+	5.1 Create our *3scale Methods*. These are 3scale representations of the Microservice endpoints used to access control and traffic analytics. In each of our 4 Microservices, there are 25 endpoints. We will reflect this in 3scale with 25 methods in each of our 4 3scale Services.  
+	5.2 Create our 100 clients - represented by Applications in 3scale.  
 For those tasks, we use the utility project included in this repo, *utilities-light4j*.  
 First we need to initialize its props.properties with various Ids associated with our 3scale account.
 Both are driven off a local Tomcat web app configured to run these utilities.
