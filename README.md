@@ -19,6 +19,7 @@ As discussed in the [Blog](http://middlewareblog.redhat.com/2017/07/25/low-laten
 	3.1 Add 4 3scale Services. ![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/1-3scaleServices.png)  
 	Your first service will already exist with the name *API*. Open it, choose Definition, Edit it and change its name to Service A. System is *api* and is not editable.
 	For your remaining 3 Services, choose Create Service. Give each one a system name like *service-b* and a name like *Service B*, repeating for C and D.  
+	  
 	3.2 Setup & Remove your 3scale Default Application Plans. Open each Service and click on Publish Application Plans.  
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/2-Applications-PlansLink.png)  
 	A will have 2, the others will have none. With Service A, there will be 2 a Basic and Unlimited. With the other 3 services, you'll need to create an Application Plan. Just enter a descriptive Name and System name (no spaces). For all 4, make sure the Default Plan is blank. This ensures when we create accounts, a default Application will not be created (we'll be doing this ourselves using the 3scale APIs).
