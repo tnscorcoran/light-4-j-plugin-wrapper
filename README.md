@@ -61,7 +61,13 @@ Before running it, we need to initialize its /src/main/resources.props.propertie
 	We'll refer to this your *3scale-access-token*   
 	![accesstoken-1.png](https://raw.githubusercontent.com/tnscorcoran/rhsso-3scale/master/05-threescale-accesstoken-3.png)   
   	  
-  	2  
+  	2  Insert your 4 Application Plan Ids. Use the *Basic* plan on Microservice A and the other 3 you created in 2.2. above. Navigate to each one and it will be in your browser address bar.  
+  	3  Set a random default password for your accounts. As this is a test, they will not be used but rather are needed to create Accounts using the 3scale API.    
+  	4  Use any random string   
+  	5  URL of your 3scale API Manager. Something like mycoolhost-admin.3scale.net   
+  	6  Id of Microservice A, retrieved in 2.3 above.   
+  	7  Path where you want generated CSV to be   
+  	8  Path where you want generated CSV to be   
 To start run *mvn tomcat7:run*
 First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
 This will be rolled out shortly.  
