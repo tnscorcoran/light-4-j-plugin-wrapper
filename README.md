@@ -23,7 +23,7 @@ As discussed in the [Blog](http://middlewareblog.redhat.com/2017/07/25/low-laten
 	  
 	3.2 Setup & Remove your 3scale Default Application Plans. Open each Service and click on Published Application Plans.  
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/2-Applications-PlansLink.png)  
-	Service A will have 2, the others will have none. With Service A, there will be 2 a Basic and Unlimited. With the other 3 services, you'll need to create an Application Plan. Just enter a descriptive Name and System name (no spaces). For all 4, make sure the Default Plan is blank. This ensures when we create accounts, a default Application will not be created (we'll be doing this ourselves using the 3scale APIs).
+	Service A will have 2, the others will have none. With Service A, there will be 2 a Basic and Unlimited. Leave them unchanged. With the other 3 services, you'll need to create an Application Plan. Just enter a descriptive Name and System name (no spaces). For all 4, make sure the Default Plan is blank. This ensures when we create accounts, a default Application will not be created (we'll be doing this ourselves using the 3scale APIs).
 	![Alt text](https://github.com/tnscorcoran/light-4-j-plugin-wrapper/blob/master/_images/2-Applications-PlansList.png)  
 	  
 	3.3 Retrieve your Service Ids and Tokens. These are required to make Reporting and Authorization from Plugin to 3scale API Manager.  
