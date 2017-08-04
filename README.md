@@ -60,13 +60,26 @@ Before running it, we need to initialize its /src/main/resources.props.propertie
   	8  Path where you want generated CSV to be   
   
 To start run *mvn tomcat7:run*
-First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
-This will be rolled out shortly.  
-Second *Account and Application* creation. We need to create 100 clients in each API. To do this run:
-http://localhost:8080/utilities-light4j/createAccountsAndApplications
 	
+First *method* creation. We have 25 endpoints in each of the 4 Microservices A, B, C and D. These 100 endpoints each have a logical *method* defined on 3scale. Traffic Authorization and Reporting is done on these methods. We use a logical naming convention to build the method at runtime. e.g. a request with a path /apid/data12 is translated into a method called apid_data12. Creation and storage of these 100 method is task 1.  	
+Assuming you are running Tomcat on localhost, hit this URL:  
+http://localhost:8080/utilities-light4j/createMethods  
+Within a couple of minutes your curl or web page should return a successful status message.
+  
+
+Second *Account and Application* creation. We need to create 100 clients in each API. Be sure number-accounts-to-create=100 in your utilities properties file. You may want to revery this to 0 in your props file afterwards so extra accounts are not inadvertently created. 
+Run:
+http://localhost:8080/utilities-light4j/createAccountsAndApplications
+After several minutes your curl or web page should return a successful status message.
+
+Third (optional) *Build CSV files*. These feed into the JMeter jmx file that is used for the test we did on the blog. It's located in the */load_test/input* dir of this repo. We have a CSV to initialize the cache and one with a random selection of clients and endpoints. The first is not really necessary as you cache will *warm up* by running the second.
+First ensure you have entered the properties cache-initializer-csv-file and load-test-csv-file in the repo's /light-4-j-plugin-wrapper/utilities-light4j/src/main/resources/props.properties 
+Start Tomcat and run the following to generate your CSV file.
+http://localhost:8080/utilities-light4j/buildCSVfiles	
+
 6. Run your 4 microservices. Run the following inside each of api_a, api_b, api_c, api_d:
-   mvn -Dmaven.test.skip=true clean install exec:exec&  	 
+   mvn -Dmaven.test.skip=true clean install exec:exec&  	
+   They will be exposed under ports 7001, 7002, 7003, 7004 respectively. 
    Test each:
    		curl http://localhost:7004/apid/data12?apiKey=<apiKeyX>
    		curl http://localhost:7003/apic/data18?apiKey=<apiKeyX>

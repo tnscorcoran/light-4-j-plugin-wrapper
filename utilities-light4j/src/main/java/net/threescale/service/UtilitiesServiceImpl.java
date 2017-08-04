@@ -57,8 +57,43 @@ public class UtilitiesServiceImpl implements UtilitiesService{
         
     }
 
-
-
+    @Override
+    public GenericResult createMethods() throws ServerError, IOException{
+    	String serviceId = props.getProperty("service-id-a");
+    	String hitsMetricId = props.getProperty("hits-metric-id-a");
+    	String base = "apia_data";
+		for (int i = 1; i<=25; i++){
+			createMethod(serviceId, base+i, hitsMetricId);
+		}
+		
+		serviceId = props.getProperty("service-id-b");
+		hitsMetricId = props.getProperty("hits-metric-id-b");
+		base = "apib_data";
+		for (int i = 1; i<=25; i++){
+			createMethod(serviceId, base+i, hitsMetricId);
+			System.out.println("created :"+base+i);
+		}
+		
+		serviceId = props.getProperty("service-id-c");
+		hitsMetricId = props.getProperty("hits-metric-id-c");
+		base = "apic_data";
+		for (int i = 1; i<=25; i++){
+			createMethod(serviceId, base+i, hitsMetricId);
+			System.out.println("created :"+base+i);
+		}
+		
+		serviceId = props.getProperty("service-id-d");
+		hitsMetricId = props.getProperty("hits-metric-id-d");
+		base = "apid_data";
+		for (int i = 1; i<=25; i++){
+			createMethod(serviceId, base+i, hitsMetricId);
+			System.out.println("created :"+base+i);
+		}
+		
+    	return new GenericResult("SUCCESS");
+    }
+    
+    
 	@Override
 	public GenericResult buildCSVfiles() throws ServerError, IOException {
 		
@@ -295,6 +330,23 @@ public class UtilitiesServiceImpl implements UtilitiesService{
 		return accountId;
 		
 	}
+	
+	private void createMethod(String serviceId, String systemAndFriendlyMethodName, String hitsMetricId) throws ServerError{
+
+	    String methodCreateURLPath = props.getProperty("method-create-url-path");
+	    methodCreateURLPath=methodCreateURLPath.replaceAll("<service-id>", serviceId);
+	    methodCreateURLPath=methodCreateURLPath.replaceAll("<hits-metric-id>", hitsMetricId);
+	    
+	    String methodCreateBody = props.getProperty("method-create-body");	     
+	    methodCreateBody=methodCreateBody.replaceAll("<token>",  props.getProperty("acccess-token"));
+	    methodCreateBody=methodCreateBody.replaceAll("<friendly_name>", systemAndFriendlyMethodName);
+	    methodCreateBody=methodCreateBody.replaceAll("<system_name>", systemAndFriendlyMethodName);
+
+	    String fullurl = HOST+methodCreateURLPath;
+	    apiAccessor.post(fullurl, methodCreateBody);
+	    	    	
+	}
+
 	
 	private void createApplication(String accountId, String servicePrefix, int index, String apiKey) throws ServerError{
 		

@@ -33,6 +33,12 @@ public class UtilitiesController {
 
 	    	return utilitiesService.buildCSVfiles();
 	    }
+		@RequestMapping(value="/createMethods", method=RequestMethod.GET, produces="application/json") 
+	    public @ResponseBody GenericResult createMethods() throws ServerError, IOException {
+	        
+
+	    	return utilitiesService.createMethods();
+	    }
 		@RequestMapping(value="/writeMethodSystemNames", method=RequestMethod.GET, produces="application/json") 
 	    public @ResponseBody GenericResult writeMethodSystemNames() throws ServerError, IOException {
 	        
