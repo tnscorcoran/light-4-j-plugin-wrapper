@@ -203,7 +203,7 @@
 		<dependency>
 			<groupId>net.3scale</groupId>
    			<artifactId>javaPluginWrapper-c</artifactId> <!-- REPLACE X-->
-  			<version>0.0.8-SNAPSHOT</version>
+  			<version>0.0.19-SNAPSHOT</version>
    		</dependency>
 
         <!-- Test Dependencies -->
