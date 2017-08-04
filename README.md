@@ -58,6 +58,7 @@ Before running it, we need to initialize its /src/main/resources.props.propertie
   	6  Id of Microservice A, retrieved in 2.3 above.   
   	7  Path where you want generated CSV to be   
   	8  Path where you want generated CSV to be   
+  	9  Host or IP of the machine you will run each Microservice   
   
 To start run *mvn tomcat7:run*
 	
@@ -74,8 +75,9 @@ After several minutes your curl or web page should return a successful status me
 
 Third (optional) *Build CSV files*. These feed into the JMeter jmx file that is used for the test we did on the blog. It's located in the */load_test/input* dir of this repo. We have a CSV to initialize the cache and one with a random selection of clients and endpoints. The first is not really necessary as you cache will *warm up* by running the second.
 First ensure you have entered the properties cache-initializer-csv-file and load-test-csv-file in the repo's /light-4-j-plugin-wrapper/utilities-light4j/src/main/resources/props.properties 
-Start Tomcat and run the following to generate your CSV file.
+Start Tomcat and run the following to generate your CSV file:  
 http://localhost:8080/utilities-light4j/buildCSVfiles	
+Within a couple of minutes your curl or web page should return a successful status message.
 
 6. Run your 4 microservices. Run the following inside each of api_a, api_b, api_c, api_d:
    mvn -Dmaven.test.skip=true clean install exec:exec&  	
