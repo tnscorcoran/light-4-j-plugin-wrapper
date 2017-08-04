@@ -83,11 +83,7 @@ Within a couple of minutes your curl or web page should return a successful stat
    mvn -Dmaven.test.skip=true clean install exec:exec&  	
    They will be exposed under ports 7001, 7002, 7003, 7004 respectively. 
    Test each:  
-   		curl http://localhost:7004/apid/data12?apiKey=apiKeyW  
-   		curl http://localhost:7003/apic/data18?apiKey=apiKeyX  
-   		curl http://localhost:7002/apib/data11?apiKey=apiKeYX  
    		curl http://localhost:7001/apia/data18?apiKey=apiKeyZ  
-    			
-  	
-
-
+   		curl http://localhost:7002/apib/data11?apiKey=apiKeYX  
+   		curl http://localhost:7003/apic/data18?apiKey=apiKeyX  
+   		curl http://localhost:7004/apid/data12?apiKey=apiKeyW  
